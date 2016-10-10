@@ -2,21 +2,17 @@ package me.juancrg90.tipcalc;
 
 import android.content.Context;
 import android.content.Intent;
-import android.hardware.input.InputManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethod;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -73,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(!strInputTotal.isEmpty()) {
             double total = Double.parseDouble(strInputTotal);
-            int tipPercentage = getTipPrecentage();
+            int tipPercentage = getTipPercentage();
 
             double tip = total * (tipPercentage/100d);
 
@@ -95,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public int getTipPrecentage() {
+    public int getTipPercentage() {
         int tipPercentage = DEFAULT_TIP_PERCENTAGE;
         String strInputTipPercentage = inputPercentage.getText().toString().trim();
 
@@ -110,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleTipChange(int change) {
-        int tipPercentage = getTipPrecentage();
+        int tipPercentage = getTipPercentage();
         tipPercentage += change;
 
         if(tipPercentage > 0) {
