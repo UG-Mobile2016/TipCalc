@@ -1,4 +1,4 @@
-package me.juancrg90.tipcalc;
+package me.juancrg90.tipcalc.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +17,8 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import me.juancrg90.tipcalc.R;
+import me.juancrg90.tipcalc.TipCalcApp;
 import me.juancrg90.tipcalc.fragments.TipHistoryListFragment;
 import me.juancrg90.tipcalc.fragments.TipHistoryListFragmentListener;
 
