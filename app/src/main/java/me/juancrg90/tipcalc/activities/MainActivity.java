@@ -97,6 +97,13 @@ public class MainActivity extends AppCompatActivity {
             txtTip.setText(strTip);
         }
     }
+
+    @OnClick(R.id.btnClear)
+    public void handleClickClear() {
+        fragmentListener.clearList();
+    }
+
+
     @OnClick(R.id.btnIncrease)
     public void handleClickIncrease() {
         hideKeyboard();
