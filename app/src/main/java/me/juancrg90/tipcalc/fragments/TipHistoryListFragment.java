@@ -1,6 +1,7 @@
 package me.juancrg90.tipcalc.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,6 +18,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.juancrg90.tipcalc.R;
 
+import me.juancrg90.tipcalc.activities.TipDetailActivity;
 import me.juancrg90.tipcalc.adapters.OnItemClickListener;
 import me.juancrg90.tipcalc.adapters.TipAdapter;
 import me.juancrg90.tipcalc.models.TipRecord;
@@ -72,8 +74,12 @@ public class TipHistoryListFragment extends Fragment implements TipHistoryListFr
 
     @Override
     public void onItemClick(TipRecord tipRecord) {
-        // TODO Implementar la logica para llamar una actividad enviandole la información de la propina
-        Log.v("MENSAJE!!!!!!!!!",tipRecord.getDateFormated());
+        Intent intent = new Intent(getActivity(), TipDetailActivity.class);
+        intent.putExtra(TipDetailActivity.TIP_KEY, tipRecord.getTip());
+        intent.putExtra(TipDetailActivity.BILL_TOTAL_KEY, tipRecord.getBill());
+        intent.putExtra(TipDetailActivity.DATE_KEY, tipRecord.getDateFormated());
+
+        startActivity(intent);
     }
 
 }
