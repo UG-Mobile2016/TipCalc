@@ -6,13 +6,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
-import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -21,7 +17,7 @@ import me.juancrg90.tipcalc.R;
 import me.juancrg90.tipcalc.activities.TipDetailActivity;
 import me.juancrg90.tipcalc.adapters.OnItemClickListener;
 import me.juancrg90.tipcalc.adapters.TipAdapter;
-import me.juancrg90.tipcalc.models.TipRecord;
+import me.juancrg90.tipcalc.entity.TipRecord;
 
 /**
  * A simple {@link Fragment} subclass.

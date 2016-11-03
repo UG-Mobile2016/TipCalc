@@ -23,7 +23,7 @@ import me.juancrg90.tipcalc.R;
 import me.juancrg90.tipcalc.TipCalcApp;
 import me.juancrg90.tipcalc.fragments.TipHistoryListFragment;
 import me.juancrg90.tipcalc.fragments.TipHistoryListFragmentListener;
-import me.juancrg90.tipcalc.models.TipRecord;
+import me.juancrg90.tipcalc.entity.TipRecord;
 
 public class MainActivity extends AppCompatActivity {
 
