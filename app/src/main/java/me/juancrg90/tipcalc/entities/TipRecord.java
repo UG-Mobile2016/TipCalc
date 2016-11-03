@@ -28,14 +28,6 @@ public class TipRecord extends BaseModel {
     @Column
     private Date timestamp;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public double getBill() {
         return bill;
     }
