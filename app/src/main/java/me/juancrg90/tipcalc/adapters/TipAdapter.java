@@ -13,7 +13,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.juancrg90.tipcalc.R;
-import me.juancrg90.tipcalc.models.TipRecord;
+import me.juancrg90.tipcalc.entities.TipRecord;
 
 /**
  * Created by JuanCrg90 on 10/13/16.

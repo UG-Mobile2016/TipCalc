@@ -1,16 +1,40 @@
-package me.juancrg90.tipcalc.models;
+package me.juancrg90.tipcalc.entities;
+
+import com.raizlabs.android.dbflow.annotation.Column;
+import com.raizlabs.android.dbflow.annotation.PrimaryKey;
+import com.raizlabs.android.dbflow.annotation.Table;
+import com.raizlabs.android.dbflow.structure.BaseModel;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import me.juancrg90.tipcalc.db.TipsDatabase;
 
 /**
  * Created by JuanCrg90 on 10/13/16.
  */
 
-public class TipRecord {
+@Table(database = TipsDatabase.class)
+public class TipRecord extends BaseModel {
+    @PrimaryKey(autoincrement = true)
+    private int id;
+
+    @Column
     private double bill;
+
+    @Column
     private int tipPercentage;
+
+    @Column
     private Date timestamp;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public double getBill() {
         return bill;

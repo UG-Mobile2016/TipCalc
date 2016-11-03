@@ -1,6 +1,6 @@
 package me.juancrg90.tipcalc.fragments;
 
-import me.juancrg90.tipcalc.models.TipRecord;
+import me.juancrg90.tipcalc.entities.TipRecord;
 
 /**
  * Created by JuanCrg90 on 10/10/16.
