@@ -7,6 +7,7 @@ import me.juancrg90.tipcalc.entities.TipRecord;
  */
 
 public interface TipHistoryListFragmentListener {
+    void initList();
     void addToList(TipRecord record);
     void clearList();
 }

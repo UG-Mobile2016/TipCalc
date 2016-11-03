@@ -58,11 +58,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        initDB();
+
         TipHistoryListFragment fragment = (TipHistoryListFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentList);
 
         fragment.setRetainInstance(true);
         fragmentListener = (TipHistoryListFragmentListener) fragment;
-        initDB();
+
+        fragmentListener.initList();
+
     }
 
     @Override
@@ -72,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDB() {
-        FlowManager.init(new FlowConfig.Builder(getApplication()).build());
+        FlowManager.init(new FlowConfig.Builder(this).build());
         FlowManager.getDatabase(TipsDatabase.class).getWritableDatabase();
     }
 
