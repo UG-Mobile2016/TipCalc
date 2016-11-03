@@ -18,6 +18,7 @@ import me.juancrg90.tipcalc.activities.TipDetailActivity;
 import me.juancrg90.tipcalc.adapters.OnItemClickListener;
 import me.juancrg90.tipcalc.adapters.TipAdapter;
 import me.juancrg90.tipcalc.entities.TipRecord;
+import me.juancrg90.tipcalc.utils.TipUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -71,9 +72,10 @@ public class TipHistoryListFragment extends Fragment implements TipHistoryListFr
     @Override
     public void onItemClick(TipRecord tipRecord) {
         Intent intent = new Intent(getActivity(), TipDetailActivity.class);
-        intent.putExtra(TipDetailActivity.TIP_KEY, tipRecord.getTip());
+
+        intent.putExtra(TipDetailActivity.TIP_KEY, TipUtils.getTip(tipRecord));
         intent.putExtra(TipDetailActivity.BILL_TOTAL_KEY, tipRecord.getBill());
-        intent.putExtra(TipDetailActivity.DATE_KEY, tipRecord.getDateFormated());
+        intent.putExtra(TipDetailActivity.DATE_KEY, TipUtils.getDateFormated(tipRecord));
 
         startActivity(intent);
     }
