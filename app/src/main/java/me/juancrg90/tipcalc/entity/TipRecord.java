@@ -3,6 +3,7 @@ package me.juancrg90.tipcalc.entity;
 import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
+import com.raizlabs.android.dbflow.structure.BaseModel;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,7 +15,7 @@ import me.juancrg90.tipcalc.db.TipsDatabase;
  */
 
 @Table(database = TipsDatabase.class)
-public class TipRecord {
+public class TipRecord extends BaseModel {
     @PrimaryKey(autoincrement = true)
     private int id;
 
